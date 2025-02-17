@@ -4,7 +4,8 @@
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    return 0;
+    let final = ((temperature - 32) * 5) / 9;
+    return final;
 }
 
 /**
@@ -12,7 +13,19 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    return 0;
+    let finalCount = 0;
+
+    if (first > 0) {
+        finalCount += first;
+    }
+    if (second > 0) {
+        finalCount += second;
+    }
+    if (third > 0) {
+        finalCount += third;
+    }
+
+    return finalCount;
 }
 
 /**
@@ -20,7 +33,8 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    let newString = message.toUpperCase() + "!";
+    return newString;
 }
 
 /**
@@ -28,7 +42,16 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    // let mssg = message;
+    // if (mssg.endsWith("?")) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+
+    //OR WITHOUT USING IF WE CAN DO
+
+    return message.endsWith("?");
 }
 
 /**
@@ -37,5 +60,22 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    // let str = word.toLowerCase();
+    // let str2 = word.toUpperCase();
+
+    // if (str || str2 == "yes") {
+    //     return true;
+    // } else if (str || str2 == "no") {
+    //     return false;
+    // } else {
+    //     return null;
+    // }
+
+    if (word.toLowerCase() == "yes") {
+        return true;
+    } else if (word.toLowerCase() == "no") {
+        return false;
+    } else {
+        return null;
+    }
 }
